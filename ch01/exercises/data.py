@@ -8,4 +8,5 @@ print(10%15)
 print(10%10)
 print(0%10)
 print(10/15)
-print ("last answer doesn't have the repeating bar")
+#last answer doesn't have the repeating bar
+
