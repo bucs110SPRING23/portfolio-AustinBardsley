@@ -17,4 +17,4 @@ print("Cost Per Class:",cost_per_class,type(cost_per_class))
 #Part B
 mylist = [2.6,"yesterday",5,"purple","800"]
 selection = random.choice(mylist)
-print(selection)
+print("Random Selection:",selection)
