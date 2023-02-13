@@ -8,5 +8,5 @@ my_turtle.shape("turtle")
 my_turtle.speed(0)
 for _ in range (sides):
     my_turtle.fd(length)
-    my_turtle.left(180-((sides-2)*180/sides))
+    my_turtle.left(360/sides)
 turtle.exitonclick()
