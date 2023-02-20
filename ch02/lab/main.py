@@ -22,9 +22,9 @@ leonardo.goto(-100,-20)
 ## 5. Your PART A code goes here
 # Race 1
 
-x = random.randrange(1,100)
+x = random.randrange(1,200)
 michelangelo.forward(x)
-y=random.randrange(1,100)
+y=random.randrange(1,200)
 leonardo.forward(y)
 michelangelo.goto(-100,20)
 leonardo.goto(-100,-20)
@@ -40,9 +40,6 @@ leonardo.goto(-100,-20)
 window.exitonclick()
 
 # PART B - complete part B here
-
-import pygame
-import math
 
 pygame.init()
 while 1:
@@ -67,7 +64,6 @@ while 1:
         pygame.time.wait(1000)
         window.fill("yellow")
         pygame.display.flip()
-        points = []
     break
 
 
