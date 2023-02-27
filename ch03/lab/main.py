@@ -5,14 +5,15 @@ pygame.init()
 while 1:
     pygame.event.get()
     window = pygame.display.set_mode([800,800])
-    size = pygame.display.get_window_size()
-    width = size[0]
-    height = size[1]
+    width = pygame.display.get_window_size()[0]
+    height = pygame.display.get_window_size()[1]
     window.fill("teal")
     pygame.draw.circle(window, "black" ,(width/2 , height/2), height/2)
     pygame.draw.circle(window, "yellow" ,(width/2 , height/2), height/2-3)
     pygame.draw.line(window, "black", ((width/2), 0) , ((width/2),height))
     pygame.draw.line(window, "black", ((width/2 - height/2), height/2) , ((width/2 + height/2),height/2))
+    pygame.draw.line(window, "black", ((width/2 - height/2), 0) , ((width/2 - height/2),height))
+    pygame.draw.line(window, "black", ((width/2 + height/2), 0) , ((width/2 + height/2),height))
     pygame.display.flip()
     pygame.time.wait(1000)
     for _ in range (10):
