@@ -9,16 +9,14 @@ while 1:
     height = pygame.display.get_window_size()[1]
     red_score = 0
     blue_score = 0
-    center_x = width/2
-    center_y = height/2
     color_choice = []
     font = pygame.font.Font(None, 48) 
-    text = font.render("Click on which color you think will win.", True, "black")
     done = False
     window.fill("white")
     red_hitbox = pygame.Rect(100,400,200,200)
     blue_hitbox = pygame.Rect(500,400,200,200)
-    window.blit(text, (100,center_y-200))
+    text = font.render("Click the color you predict to win:", True, "black")
+    window.blit(text, (100,height/2-200))
     pygame.draw.rect(window,"red",red_hitbox)
     pygame.draw.rect(window,"blue",blue_hitbox)
     pygame.display.flip()
@@ -46,19 +44,18 @@ while 1:
                 y = random.randrange (0, height)
                 pygame.draw.circle (window, "black", (x,y), 7)
                 pygame.draw.circle (window, "red", (x,y), 5)
-                if (((x-center_x)**2)+((y-center_y)**2))**(1/2) <= height/2:
+                if (((x-width/2)**2)+((y-height/2)**2))**(1/2) <= height/2:
                     red_score += 1
                 pygame.display.flip()
-                pygame.time.wait(500)
+                pygame.time.wait(800)
                 x = random.randrange (0, width)
                 y = random.randrange (0, height)
                 pygame.draw.circle (window, "black", (x,y), 7)
                 pygame.draw.circle (window, "blue", (x,y), 5)
-                if (((x-center_x)**2)+((y-center_y)**2))**(1/2) <= height/2:
+                if (((x-width/2)**2)+((y-height/2)**2))**(1/2) <= height/2:
                     blue_score += 1
                 pygame.display.flip()
-                pygame.time.wait(500)
-            pygame.time.wait(500)
+                pygame.time.wait(800)
             window.fill("white")
             text = font.render("RED:", True, "black")
             window.blit(text, (25,50))
@@ -72,20 +69,20 @@ while 1:
             if red_score > blue_score:
                 if color_choice == "red":
                     text = font.render("Red Wins! - You Guess Correctly!", True, "black")
-                    window.blit(text, (100,center_y))
+                    window.blit(text, (100,height/2))
                 else:
                     text = font.render("Red Wins! - You Guess Incorrectly :(", True, "black")
-                    window.blit(text, (100,center_y))
+                    window.blit(text, (100,height/2))
             elif red_score < blue_score:
                 if color_choice == "blue":
                     text = font.render("Blue Wins! - You Guess Correctly!", True, "black")
-                    window.blit(text, (100,center_y))
+                    window.blit(text, (100,height/2))
                 else:
                     text = font.render("Blue Wins! - You Guess Incorrectly :(", True, "black")
-                    window.blit(text, (100,center_y))    
+                    window.blit(text, (100,height/2))    
             else:
                 text = font.render("It's a Tie!", True, "black")
-                window.blit(text, (center_x-100,center_y))
+                window.blit(text, (width/2-100,height/2))
             pygame.display.flip()
             pygame.time.wait(2000)
             break

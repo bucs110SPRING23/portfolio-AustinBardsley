@@ -19,9 +19,9 @@ while 1:
     for _ in range (10):
         x = random.randrange (0, width)
         y = random.randrange (0, height)
-        center_x = width/2
-        center_y = height/2
-        if (((x-center_x)**2)+((y-center_y)**2))**(1/2) <= height/2:
+        width/2 = width/2
+        height/2 = height/2
+        if (((x-width/2)**2)+((y-height/2)**2))**(1/2) <= height/2:
             pygame.draw.circle (window, "black", (x,y), 7)
             pygame.draw.circle (window, "green", (x,y), 5)
         else:
