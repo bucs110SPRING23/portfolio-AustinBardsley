@@ -26,7 +26,7 @@ def square(x):
     args: x
     return: int
     """
-    return x*x
+    return multiplication(x,x)
 
 
 def main():
