@@ -68,17 +68,17 @@ while 1:
 
             if red_score > blue_score:
                 if color_choice == "red":
-                    text = font.render("Red Wins! - You Guess Correctly!", True, "black")
+                    text = font.render("Red Wins! - You Guessed Correctly!", True, "black")
                     window.blit(text, (100,height/2))
                 else:
-                    text = font.render("Red Wins! - You Guess Incorrectly :(", True, "black")
+                    text = font.render("Red Wins! - You Guessed Incorrectly :(", True, "black")
                     window.blit(text, (100,height/2))
             elif red_score < blue_score:
                 if color_choice == "blue":
-                    text = font.render("Blue Wins! - You Guess Correctly!", True, "black")
+                    text = font.render("Blue Wins! - You Guessed Correctly!", True, "black")
                     window.blit(text, (100,height/2))
                 else:
-                    text = font.render("Blue Wins! - You Guess Incorrectly :(", True, "black")
+                    text = font.render("Blue Wins! - You Guessed Incorrectly :(", True, "black")
                     window.blit(text, (100,height/2))    
             else:
                 text = font.render("It's a Tie!", True, "black")
