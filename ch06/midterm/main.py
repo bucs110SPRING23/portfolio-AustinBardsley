@@ -2,13 +2,13 @@ import turtle
 
 def make_turtle_list(num_turtles):
     """
-    takes an integer(n) and creates a list of n strings named turtle(n)
+    takes an integer(n) and creates a list of n strings named turtle-n
     args: int
     return: turtlelist
     """
     turtlelist = []
     for i in range (num_turtles):
-        name = "turtle"+ str(i)
+        name = "turtle-"+ str(i)
         turtlelist.append(name)
     return turtlelist
 
@@ -16,7 +16,7 @@ def draw_circles(numcircles):
     """
     draws concentric circles of varying colors
     can be revised to change circle size and color
-    args: numdots
+    args: int
     return: True
     """
     for i in range(numcircles):
@@ -56,7 +56,7 @@ def main():
         sidelength = 110
         numsides = 8
         draw_polygon(numsides,sidelength,obj)
-        
+
         obj.color("white")
         obj.pensize(.5)
         sidelength = 60
