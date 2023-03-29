@@ -9,5 +9,5 @@ class Rectangle:
         self.height = h
         self.width = w
     def __str__(self):
-        description = str("x: "+x+" ,"+"y: "+y+" ,"+"height: "+h+" ,"+"width: "+w+"")
-        return description
+        return str("x: "+x+" ,"+"y: "+y+" ,"+"height: "+h+" ,"+"width: "+w)
+        
