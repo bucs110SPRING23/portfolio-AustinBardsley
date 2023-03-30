@@ -5,4 +5,8 @@ class Surface:
         self.rect = rectangle.Rectangle(x,y,h,w)
         self.image = str(filename)
     def getRect(self):
+        """returns a rectangle object
+        args: self
+        return: self.rect
+        """
         return self.rect
