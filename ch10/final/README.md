@@ -10,4 +10,4 @@ Historical Events API - https://api-ninjas.com/api/historicalevents
 Celebrity API - https://api-ninjas.com/api/celebrity
 
 ## MISCELLANEOUS COMMENTS *(anything else you would like the grader to know)*
-For the final project (not exam) I based my naming conventions on examples from the website, but several of these examples are different from the style guide so for this project I just stuck with the style guide.
+For the final project (not exam) I based my naming conventions on examples from the website, but several of these examples are different from the style guide so for this exam I just stuck with the style guide.
