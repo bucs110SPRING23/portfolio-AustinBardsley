@@ -1,26 +1,30 @@
-import turtle #1. import modules
+import pygame
 import random
 
-#Part A
-window = turtle.Screen() # 2.  Create a screen
-window.bgcolor('lightblue')
-
-michelangelo = turtle.Turtle() # 3.  Create two turtles
-leonardo = turtle.Turtle()
-michelangelo.color('orange')
-leonardo.color('blue')
-michelangelo.shape('turtle')
-leonardo.shape('turtle')
-
-michelangelo.up() # 4. Pick up the pen so we don’t get lines
-leonardo.up()
-michelangelo.goto(-100,20)
-leonardo.goto(-100,-20)
-
-## 5. Your PART A code goes here
-
-
-# PART B - complete part B here
-
-
-window.exitonclick()
+pygame.init()
+while 1:
+    pygame.event.get()
+    window = pygame.display.set_mode([800,800])
+    width = pygame.display.get_window_size()[0]
+    height = pygame.display.get_window_size()[1]
+    window.fill("teal")
+    pygame.draw.circle(window, "black" ,(width/2 , height/2), height/2)
+    pygame.draw.circle(window, "yellow" ,(width/2 , height/2), height/2-3)
+    pygame.draw.line(window, "black", ((width/2), 0) , ((width/2),height))
+    pygame.draw.line(window, "black", ((width/2 - height/2), height/2) , ((width/2 + height/2),height/2))
+    pygame.draw.line(window, "black", ((width/2 - height/2), 0) , ((width/2 - height/2),height))
+    pygame.draw.line(window, "black", ((width/2 + height/2), 0) , ((width/2 + height/2),height))
+    pygame.display.flip()
+    pygame.time.wait(1000)
+    for _ in range (10):
+        x = random.randrange (0, width)
+        y = random.randrange (0, height)
+        if (((x-width/2)**2)+((y-height/2)**2))**(1/2) <= height/2:
+            pygame.draw.circle (window, "black", (x,y), 7)
+            pygame.draw.circle (window, "green", (x,y), 5)
+        else:
+            pygame.draw.circle (window, "black", (x,y), 7)
+            pygame.draw.circle (window, "red", (x,y), 5)
+        pygame.display.flip()
+        pygame.time.wait(500)       
+    break
